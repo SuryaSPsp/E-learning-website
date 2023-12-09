@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="./assets/login.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="home.html" method="POST">
+            <label for="username">Customer ID:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit" onclick="validateLogin()">Login</button>
+        </form>
+    
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+    
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+    
+            // Perform basic client-side validation
+            if (username === "" || password === "") {
+                alert("Please enter both username and password");
+            } else {
+                // You can perform additional validation here or send the data to the server for authentication
+                alert("Login successful. Redirecting to the dashboard...");
+                // You may redirect to the dashboard or perform other actions here
+            }
+        }
+    </script>
+    
+    </body>
+</html>
