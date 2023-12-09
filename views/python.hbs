@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>E-learning</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="/css/courses.css">
+    <script src='main.js'></script>
+</head>
+<body>
+    {{> navbar  }}
+ <section>
+    <div class="content">        
+        <h1>Python Basics</h1>
+        <table>
+            <tr>
+                <td><b>Instructors:</b> Edward Newgate, Marco</td>
+                <td><b>Course Starts:</b>19-12-2020</td>
+            </tr>       
+            <tr>
+                <td><b>Duration:</b> 19 hours</td>
+                <td><b>Course Ends:</b>15-06-2021</td>
+            </tr>
+        </table>
+<br><br>
+        <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python has a comprehensive standard library, and it is widely used in various domains such as web development, data science, artificial intelligence, automation, and more.</p>
+        <p>Python's simplicity and versatility make it an excellent choice for beginners and experienced developers alike. It continues to be one of the most popular programming languages in the world.</p>
+<br><br><br>
+        <center>
+            <input class="btn" type="button" value="Enroll Now" onclick="toggleEnrollment(this)" data-enrolled="false">
+        </center>
+    </div>
+    <div class="image">
+        <img src="/img/1(7).jpg" alt="Image">
+    </div>
+  </section>
+</body>
+<script>
+        function toggleEnrollment(anchor) {
+            const button = anchor.querySelector('.btn');
+            const isEnrolled = button.getAttribute('data-enrolled') === 'true';
+
+            if (isEnrolled) {
+                button.textContent = 'Enroll Now';
+                button.setAttribute('data-enrolled', 'false');
+            } else {
+                button.textContent = 'Unenroll';
+                button.setAttribute('data-enrolled', 'true');
+            }
+        }
+    </script>
+</html>
